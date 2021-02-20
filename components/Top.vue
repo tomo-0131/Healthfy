@@ -5,12 +5,14 @@
         <v-img
           data-aos="fade-up"
           class="img1"
-          v-bind:src="require('@/assets/images/top.png')"
+          v-bind:src="require('@/assets/images/top2.png')"
         ></v-img>
       </v-row>
     <div>
+      <br>
       <h2 data-aos='zoom-in' class="content-title">Let's Health Check !!</h2>
       <p data-aos='fade-up' data-aos-duration="1000" class="text-center">生活習慣病リスクを今すぐに調べましょう！</p>
+      <br>
       <v-divider></v-divider>
     <br>
     <br>
@@ -96,9 +98,9 @@
 
 @media screen and (min-width: 1025px){
   .img1 {
-    margin-left: 390px;
+    margin-left: 300px;
     max-height: 200px;
-    max-width: 400px;
+    max-width: 600px;
     margin-top: 60px;
   }
 
