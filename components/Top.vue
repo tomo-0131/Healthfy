@@ -1,11 +1,12 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" v-croak>
       <v-row>
         <br>
         <v-img
           data-aos="zoom-in"
           class="img1"
           v-bind:src="require('@/assets/images/top2.png')"
+          v-cloak
         ></v-img>
       </v-row>
     <div>
@@ -74,6 +75,9 @@
 
 <style>
 @media screen and (max-width: 768px){
+  [v-cloak] {
+    display: none;
+  }
   .img1 {
     display: inline-block;
     margin-left: 68px;
@@ -102,6 +106,9 @@
 }
 
 @media screen and (min-width: 1025px){
+  [v-cloak] {
+    display: none;
+  }
   .img1 {
     margin-left: 300px;
     max-height: 200px;
