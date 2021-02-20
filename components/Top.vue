@@ -71,7 +71,7 @@
 @media screen and (max-width: 768px){
   .img1 {
     display: inline-block;
-    margin-left: 80px;
+    margin-left: 68px;
     max-height: 200px;
     max-width: 300px;
     margin-top: 60px;
