@@ -3,7 +3,7 @@
       <v-row>
         <br>
         <v-img
-          data-aos="fade-up"
+          data-aos="zoom-in"
           class="img1"
           v-bind:src="require('@/assets/images/top2.png')"
         ></v-img>
@@ -22,7 +22,7 @@
           <h2 data-aos='zoom-in' data-aos-duration="1500" class="text-top">脂質異常症チェック</h2>
           <p class="text-top">脂質異常症チェック</p>
           <v-btn
-            data-aos='fade-up' data-aos-duration="1000"
+            data-aos='fade-up' data-aos-duration="1100"
             class="white--text"
             color=blue
             link to="/check1"
@@ -35,7 +35,7 @@
           <h2 data-aos='zoom-in' data-aos-duration="1500"><font-awesome-icon icon="school" class="icon" />糖尿病チェック</h2>
           <p class="text">糖尿病危険度チェック</p>
           <v-btn
-            data-aos='fade-up' data-aos-duration="1000"
+            data-aos='fade-up' data-aos-duration="1200"
             class="white--text"
             color=blue
             link to="/check1"
@@ -48,7 +48,7 @@
           <h2 data-aos='zoom-in' data-aos-duration="1500"><font-awesome-icon icon="birthday-cake" class="icon" />高血圧症チェック</h2>
           <p class="text">高血圧症危険度チェック</p>
           <v-btn
-            data-aos='fade-up' data-aos-duration="1000"
+            data-aos='fade-up' data-aos-duration="1300"
             class="white--text"
             color=blue
             link to="/check1"
