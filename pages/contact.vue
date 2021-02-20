@@ -16,7 +16,7 @@
           </div>
       </div>
       <v-card-text>
-        <div class="btn-center">
+        <div data-aos='fade-up' class="btn-center">
         <v-btn
           v-for= "icon in icons"
           :key= "icon"

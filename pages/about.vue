@@ -11,10 +11,9 @@
       <v-img
         data-aos='zoom-out'
         class="justify-center"
-        lazy-src="https://picsum.photos/id/1067/500/300"
         max-height="400"
-        max-width="300"
-        src="https://picsum.photos/id/1067/500/300"
+        max-width="350"
+        v-bind:src="require('@/assets/images/three.png')"
       ></v-img>
       <br />
     </v-row>
