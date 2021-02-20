@@ -9,41 +9,75 @@
         <div class="block-body">
           <div class="contents view">
           <br>
+          <br>
             <!-- 初期表示 -->
-              <main justify="center" align="center" class="main top-page" v-show="status === 0">
-                <p align="center">高血圧症危険度をチェックします。</p>
-                <br>
-                <ul class="answerList-start">
-                <v-btn
-                  data-aos='zoom-out' data-aos-duration="1000"
-                  class="red--text"
-                  color=blue
-                  >
-                    <a href="#" @click.prevent.stop="start" class="">START</a>
-                  </v-btn>
-                </ul>
-              </main>
             <br>
+            <main justify="center" align="center" class="main top-page" v-show="status === 0">
+            <v-card>
+              <br>
+              <p align="center">脂質異常症危険度をチェックします。</p>
+              <br>
+              <p>質問は５問あります。</p>
+              <br>
+              <ul class="answerList-start">
+
+              <v-btn
+                justify="center" align="center"
+                class="button1"
+                data-aos='zoom-out'
+                data-aos-duration="1100"
+                outlined
+                >
+                  <a href="#" @click.prevent.stop="start" class="">START</a>
+                </v-btn>
+              </ul>
+              <br>
+            </v-card>
+            </main>
             <!-- 質問表示 -->
               <transition name="fade" v-for="q in questions">
                 <main class="main top-page" v-show="q.num === status">
-                  <b>質問{{q.num}}</b>
-                  <p class="leadText" v-if="q">{{q.sentence}}</p>
+                  <v-card>
+                    <br>
+                  <h3>質問{{q.num}}</h3><br>
+                  <br>
+                  <h4 class="leadText" v-if="q">{{q.sentence}}</h4>
+                  <br>
                   <ul class="answerList">
                     <ul class="answerList">
-                      <li><a href="#" @click.prevent.stop="answer('yes')">はい</a></li>
-                      <li><a href="#" @click.prevent.stop="answer('num')">いいえ</a></li>
+                      <v-btn
+                        class="v-btn-1"
+                        data-aos='zoom-out'
+                        data-aos-duration="1100"
+                        outlined
+                      >
+                        <a href="#" @click.prevent.stop="answer('yes')">はい</a>
+                      </v-btn>
+                      <br>
+                      <br>
+                      <v-btn
+                        class="v-btn-1"
+                        data-aos='zoom-out'
+                        data-aos-duration="1100"
+                        outlined
+                      >
+                        <a href="#" @click.prevent.stop="answer('num')">いいえ</a>
+                      </v-btn>
+                      <br>
                     </ul>
+                    <br>
                   </ul>
+                  </v-card>
                 </main>
               </transition>
 
             <!-- 診断結果 -->
             <transition name="fade">
               <main class="main top-page" v-show="isFinish">
-                <b>診断結果</b>
+                <h2>診断結果</h2>
                 <br>
                 <p class="leadText">{{result.sentence}}</p>
+                <br>
                 <v-btn class="text-center">
                   <a href="#" @click.prevent.stop="reset">最初からやり直す</a>
                 </v-btn>
@@ -72,7 +106,7 @@
   let results = [
     { min: 0, max: 4, sentence: '脂質異常症の危険度は低いです。'},
     { min: 5, max: 7, sentence: '脂質異常症の危険度が高いです。生活を見直しましょう'},
-    { min: 8, max: 10, sentence: '既に脂質異常症の可能性があります。\* すぐに医者に受診して生活を改善しましょう'}
+    { min: 8, max: 10, sentence: '既に脂質異常症罹患している可能性があります。すぐに医者に受診して生活を改善しましょう'}
   ]
 
   export default {
@@ -123,6 +157,24 @@
 </script>
 
 <style>
+  a {
+    color: #fff;
+  }
+
+  .button1 {
+    margin-right: 30px;
+  }
+
+  .v-btn-1 {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #fff;
+    width: 38%;
+    margin-right: 48px;
+  }
+
   .img2 {
     z-index: 1;
   }
@@ -131,6 +183,10 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .main.top-page {
+    text-align: center;
   }
 
   .answerList {
@@ -148,15 +204,18 @@
 
   .answerList li {
     display: inline-block;
-    width: 48%;
+    margin-top: 10px;
+    margin-right: 36px;
+    width: 38%;
     text-align: center;
+    color: white;
   }
 
   .answerList li a {
     display: block;
-    padding: 20px;
+    padding: 16px;
     border-radius: 4px;
-    background: #ff8c00;
+    background: #38acc0;
     font-weight: bold;
     color: #fff;
   }
