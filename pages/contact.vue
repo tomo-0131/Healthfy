@@ -59,7 +59,7 @@ export default {
     icons: [
       'mdi-facebook',
       'mdi-twitter',
-      'mdi-linkedin',
+      'mdi-github',
       'mdi-instagram',
     ],
     items: [
