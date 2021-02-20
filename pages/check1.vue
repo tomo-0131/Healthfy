@@ -1,25 +1,25 @@
 <template>
   <div class="container" id="app">
     <main class="main">
+      <br>
       <section class="block">
         <v-row justify="center" align="center">
-           <v-col cols="10">
-            <h1 class="block-title">脂質異常症危険度チェック</h1>
-           </v-col>
+          <h1 class="block-title">脂質異常症危険度チェック</h1>
         </v-row>
         <div class="block-body">
           <div class="contents view">
           <br>
             <!-- 初期表示 -->
-              <main class="main top-page" v-show="status === 0">
-                <p class="leadText">高血圧症危険度をチェックします。</p>
-                <ul class="answerList start">
-                  <v-btn
-                    dark
-                    class="white--text"
-                    color=blue
+              <main justify="center" align="center" class="main top-page" v-show="status === 0">
+                <p align="center">高血圧症危険度をチェックします。</p>
+                <br>
+                <ul class="answerList-start">
+                <v-btn
+                  data-aos='zoom-out' data-aos-duration="1000"
+                  class="red--text"
+                  color=blue
                   >
-                    <a href="#" @click.prevent.stop="start" class="">スタート</a>
+                    <a href="#" @click.prevent.stop="start" class="">START</a>
                   </v-btn>
                 </ul>
               </main>

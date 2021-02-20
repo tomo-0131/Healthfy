@@ -3,12 +3,13 @@
     <v-row justify="center">
       <v-breadcrumbs :items="items" divider="/"></v-breadcrumbs>
     </v-row>
-    <div class="text-center">
+    <div data-aos='fade-up' class="text-center">
       <h2>A B O U T</h2>
     </div>
     <br />
     <v-row justify="center">
       <v-img
+        data-aos='zoom-out'
         class="justify-center"
         lazy-src="https://picsum.photos/id/1067/500/300"
         max-height="400"
@@ -20,14 +21,14 @@
     <v-row justify="center">
       <div style="white-space: wrap; word-wrap: break-word">
         <br />
-        <h2 class="text-center">Healthfy</h2>
+        <h2 data-aos='fade-up' class="text-center">H e a l t h f y</h2>
         <br />
-        <div class="text-center">
-          Healthfyは、数問の質問に答えることで<br />あなたの今の健康度が測れるWebサイトです。
+        <div data-aos='fade-up' class="text-center">
+          Healthfyは、<br><br>数問の質問に答えることで<br /><br>あなたの今の健康度が測れるWebサイトです。
         </div>
-        <div class="text-center">
-          質問からあなたの生活習慣病に罹患するリスク、
-          メンタル面での危険度をチェックすることができます。<br />
+        <div data-aos='fade-up' class="text-center">
+          <br>質問からあなたの生活習慣病に罹患するリスク、<br><br>
+          メンタル面での危険度をチェックすることができます。<br /><br>
           健康に関する様々な質問をこれから増やし充実させていきます。
         </div>
       </div>
@@ -36,6 +37,7 @@
     <br />
     <v-row justify="center">
       <v-img
+        data-aos='zoom-out'
         class="justify-center"
         lazy-src="https://picsum.photos/id/147/500/300"
         max-height="400"

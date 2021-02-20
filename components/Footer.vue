@@ -1,7 +1,7 @@
 <template>
   <v-footer>
     <v-col class="text-center" cols="12">
-      <div class="footer" color="white" padless>
+      <div class="footer" color="white">
         {{ new Date().getFullYear() }} — Copyright Tomoyuki Kumagai All rights
         reserved
       </div>

@@ -2,7 +2,7 @@
   <v-tool-bar dense fixed>
     <br />
     <v-toolbar-title class="text-center">
-      <nuxt-link to="/"><h1>H e a l t h f y</h1></nuxt-link>
+      <nuxt-link to="/"><h2>H e a l t h f y</h2></nuxt-link>
     </v-toolbar-title>
     <br />
     <v-tabs color="blue" centered v-model="tab">
