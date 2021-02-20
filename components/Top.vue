@@ -11,6 +11,7 @@
     <div>
       <br>
       <h2 data-aos='zoom-in' class="content-title">Let's Health Check !!</h2>
+      <br>
       <p data-aos='fade-up' data-aos-duration="1000" class="text-center">生活習慣病リスクを今すぐに調べましょう！</p>
       <br>
       <v-divider></v-divider>
@@ -31,6 +32,8 @@
            </v-btn>
         </div>
         <br>
+        <v-divider></v-divider>
+        <br>
         <div class="me">
           <h2 data-aos='zoom-in' data-aos-duration="1500"><font-awesome-icon icon="school" class="icon" />糖尿病チェック</h2>
           <p class="text">糖尿病危険度チェック</p>
@@ -43,6 +46,8 @@
             脂質異常症：危険度チェック
           </v-btn>
         </div>
+        <br>
+        <v-divider></v-divider>
         <br>
         <div class="me">
           <h2 data-aos='zoom-in' data-aos-duration="1500"><font-awesome-icon icon="birthday-cake" class="icon" />高血圧症チェック</h2>
