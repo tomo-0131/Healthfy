@@ -23,21 +23,12 @@
         <h2 class="text-center">Healthfy</h2>
         <br />
         <div class="text-center">
-          Healthfyは、数問の質問に答えることで<br />あなたの今の健康度が測れるWebです。
+          Healthfyは、数問の質問に答えることで<br />あなたの今の健康度が測れるWebサイトです。
         </div>
         <div class="text-center">
           質問からあなたの生活習慣病に罹患するリスク、
           メンタル面での危険度をチェックすることができます。<br />
-          健康に関する様々な質問をこれから増やし<br />充実させていきます。
-        </div>
-        <br />
-        <div class="text-center">
-          PLIME is a comprehensive fashion <br />e-commerce site that collects
-          fashion brands from all over the world. <br />
-          We will provide new fashion<br />
-          services to all fashion<br />
-          users in order to provide a lean and sophisticated<br />user
-          experience with the latest web technology.
+          健康に関する様々な質問をこれから増やし充実させていきます。
         </div>
       </div>
     </v-row>

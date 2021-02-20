@@ -170,11 +170,6 @@
     transform: translateY(-100vh) translateX(-100vh);
   }
 
-  .slide-enter,
-  .slide-leave-to {
-    opacity: 0;
-  }
-
   .fade-enter-active {
     transition: opacity 1s;
   }

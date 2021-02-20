@@ -12,6 +12,9 @@
       <v-tab>
         <nuxt-link to="/about">ABOUT</nuxt-link>
       </v-tab>
+      <v-tab>
+        <nuxt-link to="/contact">CONTACT</nuxt-link>
+      </v-tab>
     </v-tabs>
   </v-tool-bar>
 </template>
