@@ -41,7 +41,7 @@
         lazy-src="https://picsum.photos/id/147/500/300"
         max-height="400"
         max-width="300"
-        src="https://picsum.photos/id/147/500/300?greyscale"
+        v-bind:src="require('@/assets/images/top.png')"
       ></v-img>
       <br />
     </v-row>
