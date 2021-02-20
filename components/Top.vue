@@ -3,7 +3,8 @@
       <v-row>
         <br>
         <v-img
-          data-aos="zoom-in"
+          data-aos="zoom-in-up"
+          data-aos-anchor-placement="top-bottom"
           class="img1"
           v-bind:src="require('@/assets/images/top2.png')"
           v-cloak
@@ -80,7 +81,7 @@
   }
   .img1 {
     display: inline-block;
-    margin-left: 68px;
+    margin: 0 auto;
     max-height: 200px;
     max-width: 300px;
     margin-top: 60px;
@@ -110,7 +111,7 @@
     display: none;
   }
   .img1 {
-    margin-left: 300px;
+    margin: 0 auto;
     max-height: 200px;
     max-width: 600px;
     margin-top: 60px;
