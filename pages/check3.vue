@@ -7,7 +7,6 @@
         </v-row>
         <div class="block-body">
           <div class="contents view"><br>
-あZZあZZ
             <!-- 初期表示 --> <br>
             <main justify="center" align="center" class="main top-page" v-show="status === 0">
               <v-card
