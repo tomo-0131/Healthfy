@@ -43,9 +43,9 @@
             data-aos='fade-up' data-aos-duration="1200"
             class="white--text"
             color=blue
-            link to="/check1"
+            link to="/check2"
             >
-            脂質異常症：危険度チェック
+            糖尿病危険度：危険度チェック
           </v-btn>
         </div>
         <br>
@@ -69,6 +69,7 @@
     <br>
       <v-divider />
       <br>
+      <p data-aos='fade-up' data-aos-duration="1000" class="text-center">このWEBサイトは健康に対する注意喚起を目的に作られています。</p>
       </div>
       <br>
   </v-row>
