@@ -1,50 +1,41 @@
 <template>
   <div class="container" id="app">
-    <main class="main">
-      <br>
+    <main class="main"><br>
       <section class="block">
         <v-row justify="center" align="center">
           <h1 class="block-title">高血圧症危険度チェック</h1>
         </v-row>
         <div class="block-body">
-          <div class="contents view">
-          <br>
-            <!-- 初期表示 -->
-            <br>
+          <div class="contents view"><br>
+あZZあZZ
+            <!-- 初期表示 --> <br>
             <main justify="center" align="center" class="main top-page" v-show="status === 0">
-            <v-card
-              data-aos="zoom-in-up"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <br>
-              <p align="center">高血圧症危険度をチェックします。</p>
-              <br>
-              <p>質問は５問あります。</p>
-              <br>
-              <ul class="answerList-start">
-
-              <v-btn
-                justify="center" align="center"
-                class="button1"
-                data-aos='zoom-out'
-                data-aos-duration="1100"
-                outlined
-                >
-                  <a href="#" @click.prevent.stop="start" class="">START</a>
-                </v-btn>
-              </ul>
-              <br>
-            </v-card>
+              <v-card
+                data-aos="zoom-in-up"
+                data-aos-anchor-placement="top-bottom"
+              ><br>
+                <p align="center">高血圧症危険度をチェックします。</p><br>
+                <p>質問は５問あります。</p><br>
+                <ul class="answerList-start">
+                  <v-btn
+                    justify="center" align="center"
+                    class="button1"
+                    data-aos='zoom-out'
+                    data-aos-duration="1100"
+                    outlined
+                    >
+                    <a href="#" @click.prevent.stop="start" class="">START</a>
+                  </v-btn>
+                </ul><br>
+              </v-card>
             </main>
+
             <!-- 質問表示 -->
               <transition name="fade" v-for="q in questions">
                 <main class="main top-page" v-show="q.num === status">
-                  <v-card>
-                    <br>
-                  <h3>質問{{q.num}}</h3><br>
-                  <br>
-                  <h4 class="leadText" v-if="q">{{q.sentence}}</h4>
-                  <br>
+                  <v-card><br>
+                  <h3>質問{{q.num}}</h3><br><br>
+                  <h4 class="leadText" v-if="q">{{q.sentence}}</h4><br>
                   <ul class="answerList">
                     <ul class="answerList">
                       <v-btn
@@ -54,9 +45,7 @@
                         outlined
                       >
                         <a href="#" @click.prevent.stop="answer('yes')">はい</a>
-                      </v-btn>
-                      <br>
-                      <br>
+                      </v-btn><br><br>
                       <v-btn
                         class="v-btn-1"
                         data-aos='zoom-out'
@@ -64,10 +53,8 @@
                         outlined
                       >
                         <a href="#" @click.prevent.stop="answer('num')">いいえ</a>
-                      </v-btn>
-                      <br>
-                    </ul>
-                    <br>
+                      </v-btn><br>
+                    </ul><br>
                   </ul>
                   </v-card>
                 </main>
@@ -76,24 +63,19 @@
             <!-- 診断結果 -->
             <transition name="fade">
               <main class="main top-page" v-show="isFinish">
-                <h2>診断結果</h2>
-                <br>
-                <p class="leadText">{{result.sentence}}</p>
-                <br>
+                <h2>診断結果</h2><br>
+                <p class="leadText">{{results.sentence}}</p><br>
                 <v-btn class="text-center">
                   <a href="#" @click.prevent.stop="reset">最初からやり直す</a>
                 </v-btn>
               </main>
-            </transition>
-            <br>
+            </transition><br>
           </div>
         </div>
       </section>
     </main>
   </div>
 </template>
-
-
 
 <script>
   // 表示させる質問(Q1~Q5) (配列)
@@ -115,23 +97,27 @@
     // 初期値
     data() {
       return {
-      status: 0,
-      sum: 0,
-      questions: questions
+        status: 0,
+        sum: 0,
+        questions: questions
       }
     },
     // 算出プロパティ
     computed: {
+      //
       question() {
         return questions.filter(q => q.num === this.status).shift()
       },
+      //
       result() {
         return results.filter(a=> this.sum >= a.min && this.sum <= a.max).shift()
       },
+      // 質問終了後表示プロパティ
       isFinish() {
         return this.status > questions.length
       }
     },
+    // メソッド
     methods: {
       start() {
         this.status = 1
@@ -148,10 +134,10 @@
 
         // 答えが「はい」の場合
         if (type === 'yes') {
-          // 「はい」をクリックでポイント加算。sum。
+          // 「はい」をクリックで質問に応じたポイント加算。
           this.sum = this.sum + question.point
         }
-        // 次の質問へ行く
+        // 次の質問へ行く(+1)
         this.status++
       }
     }
