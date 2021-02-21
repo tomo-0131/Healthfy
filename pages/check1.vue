@@ -9,11 +9,13 @@
         <div class="block-body">
           <div class="contents view">
           <br>
-          <br>
             <!-- 初期表示 -->
             <br>
             <main justify="center" align="center" class="main top-page" v-show="status === 0">
-            <v-card>
+            <v-card
+              data-aos="zoom-in-up"
+              data-aos-anchor-placement="top-bottom"
+            >
               <br>
               <p align="center">脂質異常症危険度をチェックします。</p>
               <br>
