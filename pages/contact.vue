@@ -132,6 +132,7 @@ export default {
       }
     }
   },
+
   data: () => ({
     emailAddress: 'tmyk.engineer@gmail.com',
     icons: [
@@ -179,14 +180,14 @@ export default {
       return errors
     },
     emailErrors: function() {
-      const errors =[]
+      const errors = []
       if(!this.$v.email.$dirty) return errors
         !this.$v.email.email && errors.push('有効なE-MAILを入力してください')
         !this.$v.email.required && errors.push('E-MAILの入力は必須です')
       return errors
     },
     checkboxErrors: function() {
-      const errors =[]
+      const errors = []
       if (!this.$v.checkbox.$dirty) return errors
       !this.$v.checkbox.checked && errors.push('You must agree to continue!')
       return errors
