@@ -8,6 +8,7 @@
       <v-card class="mx-auto" max-width="670px">
         <br>
         <p v-bind:style="txtCenterObj"> お問い合わせ </p>
+
         <v-card-text>
           <v-form>
             <v-select
@@ -22,7 +23,7 @@
 
             <v-text-field
               v-model="name"
-              :error-messages="名前は10文字以内"
+              :error-messages="nameErrors"
               :counter="10"
               label="お名前"
               required
@@ -32,7 +33,7 @@
 
             <v-text-field
               v-model="email"
-              :error-messages="有効なE-MAILを入力してください"
+              :error-messages="emailErrors"
               label="E-MAIL"
               required
               @input="$v.email.$touch()"
@@ -52,7 +53,7 @@
               class="mr-4"
               color="primary"
               @click="submit"
-              >送信
+            >送信
             </v-btn>
 
             <v-btn
@@ -63,36 +64,41 @@
             </v-btn>
 
           </v-form>
+
           <br>
         </v-card-text>
       </v-card>
+
     <br><br>
     </div>
-      <div data-aos='fade-up' class="text-center">
-          <h2>C O N T A C T</h2>
+
+    <div data-aos='fade-up' class="text-center">
+      <h2>C O N T A C T</h2>
+      <br>
+      <div class="contact-card">
+        <v-card height="200px" width="370px" data-aos='fade-up'>
           <br>
-          <div class="contact-card">
-            <v-card height="200px" width="370px" data-aos='fade-up'>
-              <br>
-              <br>
-              <h3 data-aos='fade-up' class="text-center"> E-MAIL : {{ emailAddress }} </h3>
-            </v-card>
-          </div>
+          <br>
+          <h3 data-aos='fade-up' class="text-center"> E-MAIL : {{ emailAddress }} </h3>
+        </v-card>
       </div>
-      <v-card-text>
-        <div data-aos='fade-up' class="btn-center">
-        <v-btn
-          v-for= "icon in icons"
-          :key= "icon"
-          class="mx-3 gray--text"
-          icon
-        >
-          <v-icon size="30px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-        </div>
-      </v-card-text>
+    </div>
+
+    <v-card-text>
+      <div data-aos='fade-up' class="btn-center">
+      <v-btn
+        v-for= "icon in icons"
+        :key= "icon"
+        class="mx-3 gray--text"
+        icon
+      >
+        <v-icon size="30px">
+          {{ icon }}
+        </v-icon>
+      </v-btn>
+      </div>
+    </v-card-text>
+
   </v-container>
 </template>
 
@@ -141,7 +147,7 @@ export default {
       'mdi-github',
       'mdi-instagram',
     ],
-    breadclumbs: [
+    breadcrumbs: [
       {
         text: "home",
         disabled: false,
